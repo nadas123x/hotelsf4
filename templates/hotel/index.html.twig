@@ -1,9 +1,9 @@
-{% extends 'base.html.twig' %}
+{% extends 'base0.html.twig' %}
 
 {% block title %}Hotel index{% endblock %}
 
 {% block body %}
-        <link rel="stylesheet" type="text/css" href="{{asset('css/img.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/h.css') }}">
 
     <h1><u>Listes des hotels:</u></h1>
     <br>
@@ -35,11 +35,14 @@
                 <td  style="    border-color: #080808;">{{ hotel.services }}</td>
                 <td  style="    border-color: #080808;">
    
-    <a  href="{{ path('app_hotel_show', {'id': hotel.id}) }}" class="btn  btn-dark" style="background-color: #877466;" role="button" type="submit">Montrer</a></a>
+    <a  href="{{ path('app_hotel_show', {'id': hotel.id}) }}" class="btn  btn-dark" style="background-color: #877466;" role="button" type="submit"> &nbsp;Montrer &nbsp;</a></a>
     <br>
        <br>
-    <a  href="{{ path('app_hotel_edit', {'id': hotel.id}) }}" class="btn  btn-dark" style="background-color: #877466;" role="button" type="submit">Modifier</a></a>
-
+    <a  href="{{ path('app_hotel_edit', {'id': hotel.id}) }}" class="btn  btn-dark" style="background-color: #877466;" role="button" type="submit"> &nbsp;Modifier &nbsp;</a></a>
+    <br>
+       <br>
+ <a class="btn  btn-dark" style="background-color: #877466;" href="http://127.0.0.1:8000/hotel/riu/tikida/
+">Modifier Chambres</a>
                 </td>
             </tr>
         {% else %}

@@ -2,6 +2,8 @@
 
 {% block title hotel_riu_tikida.typeChambre  %}
 {% block body %}
+          <link rel="stylesheet" type="text/css" href="{{asset('css/riu.css') }}">
+<body>
    <div class="jumbotron">
     <div class="container">
       
@@ -15,17 +17,20 @@
                 {% endif %}
             </div>
             <div class="col-md-4">
-                <h1>{{ hotel_riu_tikida.title }}</h1>
-                <h2>{{ hotel_riu_tikida.Surface }} pièces - {{ hotel_riu_tikida.price }} m²</h2>
-                <div class="text-primary" style="font-size: 4rem;font-weight: bold;">{{ hotel_riu_tikida.price }} €
+                <h1>{{ hotel_riu_tikida.typeChambre }}</h1>
+                <h2>{{ hotel_riu_tikida.Surface }} m² - {{ hotel_riu_tikida.price }} Dh</h2>
+                <br>
+                  <br>
+                    <br>
+                      <br>
+                <div class="text-primary" style="font-size: 4rem;font-weight: bold;">
                 </div>
-                <a href="{{ path('galerie') }}" class="btn btn-primary">Contacter l'agence</a>
+ <p><a href="{{ path('app_contact_new') }}"  class="btn btn-dark  btn-lg" style="background-color: #877466;" role="button">Contacter l'agence </a></p>
+
                 <div id="contact-form" class="mt-4">
                   
                 
                     <div class="form-group">
-                        <button class="btn btn-primary">Envoyer</button>
-                      <a href="{{ path('galerie') }}" class="btn btn-primary">Galerie Photos</a>
                     </div>
                
                 </div>
@@ -35,19 +40,19 @@
 <div class="container mt-4">
 
     <p>
-        {{ hotel_riu_tikida.description | nl2br }}
+      <b>  {{ hotel_riu_tikida.description | nl2br }} <b>
     </p>
 
     <div class="row">
         <div class="col-md-8">
-            <h2>Caractéristiques</h2>
-            <table class="table table-striped">
+            <h2> <u>Caractéristiques </u></h2>
+            <table class="table table-striped" style="    border: 0.25rem solid;">
                 <tr>
-                    <td>Surface habitable</td>
-                    <td>{{ hotel_riu_tikida.price }} m²</td>
+                    <td>Surface Chambre</td>
+                    <td>{{ hotel_riu_tikida.Surface }} m²</td>
                 </tr>
                 <tr>
-                    <td>Pièces</td>
+                    <td>Prix par personne</td>
                     <td>{{ hotel_riu_tikida.price }}</td>
 
                 </tr>
@@ -63,4 +68,6 @@
      <!--  <a href="{{ path('app_hotel_riu_tikida_edit', {'id': hotel_riu_tikida.id}) }}">edit</a> -->
 
        <!-- {{ include('hotel_riu_tikida/_delete_form.html.twig') }} -->
+       
+    </body>
 {% endblock %} 

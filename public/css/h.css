@@ -10,6 +10,7 @@
  
     background-image: url(https://www.alksar.com/wp-content/uploads/2018/05/Place-Jemaa-El-Fna-Marrakech-tomb%C3%A9e-de-la-Nuit.jpg);
   }
+  
 
   .saying_block {
     width: 100%;
@@ -48,6 +49,9 @@
   .saying_block.Musk .saying_content {
        background-color:    rgb(6 6 6 / 70%);
   }
+  .saying_block.buffett .saying_content {
+    background-color:    rgba(17, 15, 15, 0.548);
+}
   .saying_block .saying_content {
     width: 100%;
     height: 100%;
@@ -186,7 +190,7 @@
     color: rgb(191 119 119 / 90%);
 }
 .bg-dark {
-  background-color: #221615f0!important; 
+  background-color:#4c4140e3!important;
 }
 *, ::after, ::before {
   box-sizing: content-box;
@@ -197,14 +201,15 @@
 
 }
 .card {
-  border-color: #080808;
+  border-color: #877466;
+  padding-left: 0.5em;
     background-color: rgba(39, 29, 29, 0.7);
+    margin: 0.3rem 0;
 
 }
 
 .card-title{
   border-color: #080808;
 
-  background-color: rgb(221, 217, 217);
-  color: blue;
+  color: rgb(0, 0, 0);
 }

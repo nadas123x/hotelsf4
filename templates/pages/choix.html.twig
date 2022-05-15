@@ -1,4 +1,7 @@
-            
+          
+
+
+{% block body %}
                 <link rel="stylesheet" type="text/css" href="{{asset('css/choix.css') }}">
 
 
@@ -25,7 +28,7 @@
       <h2>Demandes
       &Messages</h2>
       <p></p>
-       <a href="http://localhost:8080/nada/contact.jsp" >Cliquez ici</a>
+       <a href="{{  path('app_contact_index') }}" >Cliquez ici</a>
     </div>
      </div>
 
@@ -33,4 +36,4 @@
     
   </div>
   </section>
- 
+ {% endblock %}

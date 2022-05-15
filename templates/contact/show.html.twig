@@ -1,0 +1,40 @@
+{% extends 'base0.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+        <link rel="stylesheet" type="text/css" href="{{asset('css/img.css') }}">
+
+    <h1>Les messages reçus: <br>
+<br>
+</h1>
+<body>
+    <table class="table">
+        <tbody style="border: 0.25rem solid;">
+           
+            <tr>
+                <th style="border: 0.25rem solid;">Email</th>
+                <td style="border: 0.25rem solid;">{{ contact.email }}</td>
+            </tr>
+            <tr>
+                <th style="border: 0.25rem solid;">Nom</th>
+                <td style="border: 0.25rem solid;">{{ contact.nom }}</td>
+            </tr>
+            <tr>
+                <th style="border: 0.25rem solid;">Prenom</th>
+                <td style="border: 0.25rem solid;">{{ contact.prenom }}</td>
+            </tr>
+            <tr>
+                <th style="border: 0.25rem solid;">Message</th>
+                <td style="border: 0.25rem solid;">{{ contact.message }}</td>
+            </tr>
+        </tbody>
+    </table>
+    </body>
+
+  <a  href="{{ path('app_contact_index') }}" class="btn  btn-dark" style="background-color: #877466;" role="button" type="submit"> &nbsp;&nbsp;Retour&nbsp;&nbsp;</a></a>
+
+  <a  href="https://mail.google.com" class="btn  btn-dark" style="background-color: #877466;" role="button" type="submit"> &nbsp;&nbsp;Répondre&nbsp;&nbsp;</a></a>
+
+    {{ include('contact/_delete_form.html.twig') }}
+{% endblock %}

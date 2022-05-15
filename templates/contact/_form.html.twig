@@ -1,0 +1,7 @@
+{{ form_start(form) }}
+<p> <b> Veuillez de remplir ce formulaire et de détailler votre message <b> </p>
+    {{ form_widget(form) }}
+    <br>
+    <button  href="{{ path('app_register') }}" class="btn  btn-dark" style="background-color: #877466;" >{{ button_label|default('Submit') }}</button>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;</p>
+{{ form_end(form) }}

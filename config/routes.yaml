@@ -10,3 +10,6 @@ galerie:
 choix:
    path: /choix
    controller: App\Controller\ChoixController::choix
+valide:
+   path: /valide
+   controller: App\Controller\DemandevalideController::valide

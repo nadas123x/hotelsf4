@@ -1,13 +1,13 @@
-{% extends 'base.html.twig' %}
+{% extends 'base0.html.twig' %}
 
-{% block title %}Edit Hotel{% endblock %}
+{% block title %}Modification Hotel{% endblock %}
 
 {% block body %}
-    <h1>Edit Hotel</h1>
+    <h1>Modification:</h1>
 
     {{ include('hotel/_form.html.twig', {'button_label': 'Update'}) }}
+   
 
-    <a href="{{ path('app_hotel_index') }}">back to list</a>
-
+    <a class="btn  btn-dark" style="background-color: #877466;" href="{{ path('app_hotel_index') }}">Retour</a>
     {{ include('hotel/_delete_form.html.twig') }}
 {% endblock %}

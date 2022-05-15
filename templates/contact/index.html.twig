@@ -1,0 +1,40 @@
+{% extends 'base0.html.twig' %}
+
+{% block title %}Contact index{% endblock %}
+
+{% block body %}
+ 
+<br>
+<br>
+    <table class="table" style="    border-color: #080808;">
+        <thead style="    border-color: #080808;">
+            <tr style="    border-color: #080808;">
+              
+                <th style="    border: 0.25rem solid;">Email</th>
+                <th style="   border: 0.25rem solid;">Nom</th>
+                <th style="    border: 0.25rem solid;">Prenom</th>
+                <th style="  border: 0.25rem solid;">Message</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td style="border: 0.25rem solid;">{{ contact.email }}</td>
+                <td style="border: 0.25rem solid;">{{ contact.nom }}</td>
+                <td style="border: 0.25rem solid;">{{ contact.prenom }}</td>
+                <td style="border: 0.25rem solid;">{{ contact.message }}</td>
+                <td >
+                     <a  href="{{ path('app_contact_show', {'id': contact.id}) }}" class="btn  btn-dark" style="background-color: #877466;" role="button" type="submit"> &nbsp;&nbsp;Voir&nbsp;&nbsp;</a></a>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+               
+        {% endfor %}
+        </tbody>
+    </table>
+
+  
+{% endblock %}

@@ -1,0 +1,34 @@
+
+.card {
+    border-color: #000000;
+    background-color: rgb(193 177 177 / 90%);
+    margin: 0.5rem 0;
+}
+.bg-dark {
+    background-color:#4c4140e3!important;
+  }
+  body
+{
+
+  background-size: cover;
+  background-image: url(https://imagizer.imageshack.com/img923/2031/g7vTQ7.png);
+   ;}
+   
+  .jumbotron
+   {
+   
+     background-size: cover;
+     background-image: url(https://imagizer.imageshack.com/img923/2031/g7vTQ7.png);
+      ;}
+      
+.container{
+    background-color: #ffffffa8;
+    border: #000000;
+  
+}
+.card-title{
+  border-color: #080808;
+
+  background-color: rgb(221, 217, 217);
+  color: blue;
+}

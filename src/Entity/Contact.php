@@ -2,191 +2,90 @@
 
 namespace App\Entity;
 
-use Symfony\Component\Validator\Constraints as Assert;
+use App\Repository\ContactRepository;
+use Doctrine\ORM\Mapping as ORM;
 
-class Contact {
+/**
+ * @ORM\Entity(repositoryClass=ContactRepository::class)
+ */
+class Contact
+{
     /**
-     * @var string|null
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=100)
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      */
-    private $firstname;
+    private $id;
 
     /**
-     * @var string|null
-     * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=100)
-     */
-    private $lastname;
-
-    /**
-     * @var string|null
-     * @Assert\NotBlank()
-     * @Assert\Regex(
-     * pattern="/[0-9]{10}/"
-     * )
-     */
-    private $phone;
-
-    /**
-     * @var string|null
-     * @Assert\NotBlank()
-     * @Assert\Email()
+     * @ORM\Column(type="string", length=255)
      */
     private $email;
 
     /**
-     * @var string|null
-     * @Assert\NotBlank()
-     * @Assert\Length(min=10)
+     * @ORM\Column(type="string", length=255)
+     */
+    private $nom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $prenom;
+
+    /**
+     * @ORM\Column(type="text")
      */
     private $message;
 
-    /**
-     * @var hotelriutikida|null
-     */
-    private $hotelriutikida;
-
-    /**
-     * Get the value of message
-     *
-     * @return  string|null
-     */ 
-    public function getMessage(): ?string
+    public function getId(): ?int
     {
-        return $this->message;
+        return $this->id;
     }
 
-    /**
-     * Set the value of message
-     *
-     * @param  string|null  $message
-     *
-     * @return  self
-     */ 
-    public function setMessage(?string $message): Contact
-    {
-        $this->message = $message;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of email
-     *
-     * @return  string|null
-     */ 
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
-    /**
-     * Set the value of email
-     *
-     * @param  string|null  $email
-     *
-     * @return  self
-     */ 
-    public function setEmail(?string $email): Contact
+    public function setEmail(string $email): self
     {
         $this->email = $email;
 
         return $this;
     }
 
-    /**
-     * Get the value of firstname
-     *
-     * @return  string|null
-     */ 
-    public function getFirstname(): ?string
+    public function getNom(): ?string
     {
-        return $this->firstname;
+        return $this->nom;
     }
 
-    /**
-     * Set the value of firstname
-     *
-     * @param  string|null  $firstname
-     *
-     * @return  self
-     */ 
-    public function setFirstname(?string $firstname): Contact
+    public function setNom(string $nom): self
     {
-        $this->firstname = $firstname;
+        $this->nom = $nom;
 
         return $this;
     }
 
-    /**
-     * Get the value of lastname
-     *
-     * @return  string|null
-     */ 
-    public function getLastname(): ?string
+    public function getPrenom(): ?string
     {
-        return $this->lastname;
+        return $this->prenom;
     }
 
-    /**
-     * Set the value of lastname
-     *
-     * @param  string|null  $lastname
-     *
-     * @return  self
-     */ 
-    public function setLastname(?string $lastname): Contact
+    public function setPrenom(string $prenom): self
     {
-        $this->lastname = $lastname;
+        $this->prenom = $prenom;
 
         return $this;
     }
 
-    /**
-     * Get pattern="/[0-9]{10}/"
-     *
-     * @return  string|null
-     */ 
-    public function getPhone(): ?string
+    public function getMessage(): ?string
     {
-        return $this->phone;
+        return $this->message;
     }
 
-    /**
-     * Set pattern="/[0-9]{10}/"
-     *
-     * @param  string|null  $phone  pattern="/[0-9]{10}/"
-     *
-     * @return  self
-     */ 
-    public function setPhone(?string $phone): Contact
+    public function setMessage(string $message): self
     {
-        $this->phone = $phone;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of hotelriutikida
-     *
-     * @return  HotelRiuTikida|null
-     */ 
-    public function getHotelRiuTikida(): ?HotelRiuTikida
-    {
-        return $this->hotelriutikida;
-    }
-
-    /**
-     * Set the value of hotelriutikida
-     *
-     * @param  HotelRiuTikida|null  $hotelriutikida
-     *
-     * @return  self
-     */ 
-    public function setHotelRiuTikida(?HotelRiuTikida $hotelriutikida): ?Contact
-    {
-        $this->hotelriutikida = $hotelriutikida;
+        $this->message = $message;
 
         return $this;
     }

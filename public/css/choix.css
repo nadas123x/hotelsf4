@@ -27,10 +27,13 @@
 body
 {
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-   background-color: #221615f0!important;
+  min-height: 50vh;
+  background-color:    rgba(17, 16, 16, 0.856);
+  background-size: cover;
+  background-image: url(https://imagizer.imageshack.com/img923/2031/g7vTQ7.png);
    ;}
    
 
@@ -41,7 +44,7 @@ body
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 40px 0;
+
 }
 
 .container .box
@@ -52,7 +55,7 @@ body
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 30px;
+  margin: 30px 30px;
   transition: 0.5s;
 }
 .saying_block.Musk .saying_content {
@@ -104,13 +107,13 @@ body
 .container .box:nth-child(1):before,
 .container .box:nth-child(1):after
 {
-  background: linear-gradient(315deg, #8d6e59,white)
+  background:linear-gradient(315deg, #8b6137,white)
 }
 
 .container .box:nth-child(2):before,
 .container .box:nth-child(2):after
 {
-  background: linear-gradient(315deg, #a37b55,white)
+  background: linear-gradient(315deg, #8b6137,white)
 }
 
 .container .box:nth-child(3):before,

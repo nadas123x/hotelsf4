@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demande de contact{% endblock %}
+
+{% block body %}
+    
+        <link rel="stylesheet" type="text/css" href="{{asset('css/img.css') }}">
+<section class="saying_block Musk">
+
+    <div class="saying_content">
+    {{ include('contact/_form.html.twig') }}
+
+     </div>
+
+ </section>
+{% endblock %}

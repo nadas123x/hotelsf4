@@ -1,33 +1,35 @@
-{% extends 'base.html.twig' %}
+{% extends 'base0.html.twig' %}
 
 {% block title %}HotelRiuTikida index{% endblock %}
 
 {% block body %}
+<br>
+<br>
    <link rel="stylesheet" type="text/css" href="{{asset('css/h.css') }}">
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                 <th>Nom</th>
-                <th>TypeChambre</th>
-                <th>Prix</th>
-                <th>Surface</th>
-                <th>Description</th>
-                <th>actions</th>
+                <th style="    border: 0.25rem solid;">Id</th>
+                 <th style="    border: 0.25rem solid;">Nom</th>
+                <th style="    border: 0.25rem solid;">TypeChambre</th>
+                <th style="    border: 0.25rem solid;">Prix</th>
+                <th style="    border: 0.25rem solid;">Surface</th>
+                <th style="    border: 0.25rem solid;">Description</th>
+               
             </tr>
         </thead>
         <tbody>
         {% for hotel_riu_tikida in hotel_riu_tikida %}
             <tr>
-                <td>{{ hotel_riu_tikida.id }}</td>
-                <td>{{ hotel_riu_tikida.title}}</td>
-                <td>{{ hotel_riu_tikida.typeChambre }}</td>
-                <td>{{ hotel_riu_tikida.price }}</td>
-                <td>{{ hotel_riu_tikida.surface }}</td>
-                <td>{{ hotel_riu_tikida.description }}</td>
-                <td>
-                    <a href="{{ path('app_hotel_riu_tikida_show', {'id': hotel_riu_tikida.id}) }}">show</a>
-                    <a href="{{ path('app_hotel_riu_tikida_edit', {'id': hotel_riu_tikida.id}) }}">edit</a>
+                <td style="    border: 0.25rem solid;">{{ hotel_riu_tikida.id }}</td>
+                <td style="    border: 0.25rem solid;">{{ hotel_riu_tikida.title}}</td>
+                <td style="    border: 0.25rem solid;">{{ hotel_riu_tikida.typeChambre }}</td>
+                <td style="    border: 0.25rem solid;">{{ hotel_riu_tikida.price }}</td>
+                <td style="    border: 0.25rem solid;">{{ hotel_riu_tikida.surface }}</td>
+                <td style="    border: 0.25rem solid;">{{ hotel_riu_tikida.description }}</td>
+                <td >
+                    <a class="btn  btn-dark" style="background-color: #877466;" href="{{ path('app_hotel_riu_tikida_show', {'id': hotel_riu_tikida.id}) }}">&nbsp;&nbsp;Voir &nbsp;&nbsp;&nbsp;</a>
+                    <a  class="btn  btn-dark" style="background-color: #877466;" href="{{ path('app_hotel_riu_tikida_edit', {'id': hotel_riu_tikida.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -38,5 +40,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_hotel_riu_tikida_new') }}">Create new</a>
+    <a class="btn  btn-dark" style="background-color: #877466;" href="{{ path('app_hotel_riu_tikida_new') }}">Create new</a>
 {% endblock %}

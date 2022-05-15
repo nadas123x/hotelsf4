@@ -18,7 +18,9 @@
 
   <section class="saying_block buffett">
     <div class="saying_content">
-     
+      <div class="saying_content">
+      <div class="text_box">
+
         <p>
         </p>
       </div>
@@ -29,8 +31,8 @@
      <div class="jumbotron bg-dark text-white"
      >
 
-        <h1> Vous êtes les bienvenus</h1>
-         <p><a class="btn btn-primary  btn-lg" style="background-color: #877466;" role="button">Learn more</a></p>
+        <h1> Vous êtes les bienvenus!</h1>
+         <p><a href="#hotels"  class="btn btn-dark  btn-lg" style="background-color: #877466;" role="button">Consultez nos suggestions d'hôtels </a></p>
         <p>
         </p>
       </div>
@@ -42,7 +44,7 @@
     </div>
 </div>
 
-<div class="container">
+<div id="hotels"class="container">
     <div class="row flex">
         {% for hotel in properties %}
        
@@ -51,7 +53,7 @@
             <div class="card" >
                 <div class="card-body">
                     <h5 class="card-title" >
-                        <a
+                        <a class="btn  btn-dark" style="background-color: #877466;"
                             href="{{ path('app_hotel_show', {id: hotel.id}) }}">{{ hotel.nom }}</a>
                     </h5>
                     <p class="card text-white"> {{ hotel.adresse }}</p>

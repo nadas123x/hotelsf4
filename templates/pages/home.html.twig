@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Hotel' %}
+
+{% block body %}
+
+        <link rel="stylesheet" type="text/css" href="{{asset('css/h.css') }}">
+
+
+  <section class="saying_block Musk">
+    <div class="saying_content">
+      <div class="text_box">
+        <h2>Découvrez les différents hôtels à Marrakech <br></h2>
+        <h3></h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="saying_block buffett">
+    <div class="saying_content">
+     
+        <p>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="saying_block bezos">
+    <div class="saying_content">
+     <div class="jumbotron bg-dark text-white"
+     >
+
+        <h1> Vous êtes les bienvenus</h1>
+         <p><a class="btn btn-primary  btn-lg" style="background-color: #877466;" role="button">Learn more</a></p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="saying_block sandberg">
+ 
+    </div>
+</div>
+
+<div class="container">
+    <div class="row flex">
+        {% for hotel in properties %}
+       
+    
+        <div class="col-3">
+            <div class="card" >
+                <div class="card-body">
+                    <h5 class="card-title" >
+                        <a
+                            href="{{ path('app_hotel_show', {id: hotel.id}) }}">{{ hotel.nom }}</a>
+                    </h5>
+                    <p class="card text-white"> {{ hotel.adresse }}</p>
+                      {% if hotel.filename %}
+        <img src="{{ vich_uploader_asset(hotel, 'imageFile')  }}" alt="card-img-top" style="width: 100%;height:100%;">
+{% endif %}
+                    <div class="text-primary" style="font-weight: bold; font-size: 2em;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+  </section>
+ 
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HotelRiuTikida index{% endblock %}
+
+{% block body %}
+   <link rel="stylesheet" type="text/css" href="{{asset('css/h.css') }}">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                 <th>Nom</th>
+                <th>TypeChambre</th>
+                <th>Prix</th>
+                <th>Surface</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hotel_riu_tikida in hotel_riu_tikida %}
+            <tr>
+                <td>{{ hotel_riu_tikida.id }}</td>
+                <td>{{ hotel_riu_tikida.title}}</td>
+                <td>{{ hotel_riu_tikida.typeChambre }}</td>
+                <td>{{ hotel_riu_tikida.price }}</td>
+                <td>{{ hotel_riu_tikida.surface }}</td>
+                <td>{{ hotel_riu_tikida.description }}</td>
+                <td>
+                    <a href="{{ path('app_hotel_riu_tikida_show', {'id': hotel_riu_tikida.id}) }}">show</a>
+                    <a href="{{ path('app_hotel_riu_tikida_edit', {'id': hotel_riu_tikida.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_hotel_riu_tikida_new') }}">Create new</a>
+{% endblock %}

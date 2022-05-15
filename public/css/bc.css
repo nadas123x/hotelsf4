@@ -1,0 +1,14 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+body {
+	background-image: url(
+		https://res.cloudinary.com/grand-luxury/image/upload/w_480,h_256,q_50,f_auto,c_fill,g_center,dpr_3/remote_glh/original/92660-root-exteriors-front-facade.jpg
+	  );
+	  background-color: rgba(48, 42, 42, 0.7);
+}
+.h1, h1 {
+     font-size: 3.5rem; 
+	 color: #b2cde9;
+	 background-color: #567895;
+}

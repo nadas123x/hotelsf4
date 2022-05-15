@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.jumbotron{
+    border-color: #080808;
+    background-color: rgb(145 139 139 / 73%);
+}
+.p{
+    color:green
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgb(114 102 102 / 27%);
+}
+.table-nad{
+    border-spacing: 5px;
+}
+
+.form-control{
+    width: 100%;
+  
+}
+
+
+.saying_block.Musk .saying_content {
+    background-color:    rgba(17, 16, 16, 0.856);
+}
+.saying_block.Musk {
+ 
+    background-image: url(https://www.alksar.com/wp-content/uploads/2018/05/Place-Jemaa-El-Fna-Marrakech-tomb%C3%A9e-de-la-Nuit.jpg);
+  }
+
+

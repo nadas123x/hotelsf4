@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hotel index{% endblock %}
+
+{% block body %}
+        <link rel="stylesheet" type="text/css" href="{{asset('css/img.css') }}">
+
+    <h1><u>Listes des hotels:</u></h1>
+    <br>
+
+ <br>
+
+          &nbsp;  <table class="table table-striped" style="border: 1px solid;">
+        <thead  style="    border-color: #080808;">
+        
+           &nbsp; <tr  style="    border-color: #080808;">
+              
+                <th  style="    border-color: #080808;">Nom</th>
+                <th  style="    border-color: #080808;">Adresse</th>
+                <th  style="    border-color: #080808;">Rang</th>
+                <th  style="    border-color: #080808;">Description</th>
+                <th  style="    border-color: #080808;">Etoiles</th>
+                <th  style="    border-color: #080808;">Services</th>
+                <th  style="    border-color: #080808;">actions</th>
+            </tr>
+        </thead>
+        <tbody style="border: 1px solid,border-color: #080808,;">
+        {% for hotel in hotels %}
+            <tr>
+                <td  style="    border-color: #080808;">{{ hotel.nom }}</td>
+                <td  style="    border-color: #080808;">{{ hotel.adresse }}</td>
+                <td  style="    border-color: #080808;">{{ hotel.rang }}</td>
+                <td  style="    border-color: #080808;">{{ hotel.description }}</td>
+                <td  style="    border-color: #080808;">{{ hotel.toiles }}</td>
+                <td  style="    border-color: #080808;">{{ hotel.services }}</td>
+                <td  style="    border-color: #080808;">
+   
+    <a  href="{{ path('app_hotel_show', {'id': hotel.id}) }}" class="btn  btn-dark" style="background-color: #877466;" role="button" type="submit">Montrer</a></a>
+    <br>
+       <br>
+    <a  href="{{ path('app_hotel_edit', {'id': hotel.id}) }}" class="btn  btn-dark" style="background-color: #877466;" role="button" type="submit">Modifier</a></a>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <a   href="{{ path('app_hotel_new') }}" class="btn  btn-dark" style="background-color: #877466;" role="button" type="submit"> &nbsp; &nbsp; Ajouter &nbsp; &nbsp;</a></a>
+
+{% endblock %}

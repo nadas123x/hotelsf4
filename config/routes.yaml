@@ -1,0 +1,12 @@
+home:
+  path: /nada
+  controller: App\Controller\HomeController::index
+homeriu:
+  path: /riu
+  controller: App\Controller\HomeRiuController::index
+galerie:
+   path: /galerie
+   controller: App\Controller\GallerieController::galerie
+choix:
+   path: /choix
+   controller: App\Controller\ChoixController::choix

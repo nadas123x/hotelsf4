@@ -1,0 +1,14 @@
+# Query: liip_imagine.yaml
+# ContextLines: 1
+
+2 résultats - Fichiers 2
+
+vendor\liip\imagine-bundle\Resources\doc\filters.rst:
+  124          public function filter(int $width, int $height) {
+  125:             $filter = '...'; // Name of the `filter_set` in `config/packages/liip_imagine.yaml`
+  126              $path = '...'; // Path of the image, relative to `/public/`
+
+vendor\liip\imagine-bundle\Resources\doc\optimizations\resolve-cache-images-in-background.rst:
+  60  
+  61:      config/packages/liip_imagine.yaml
+  62  

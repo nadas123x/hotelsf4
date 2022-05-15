@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Hotel' %}
+
+{% block body %}
+
+ 
+  
+
+<div class="container">
+      
+    <div class="row flex">
+  
+        {% for hotel_riu_tikida in properties %}
+       
+    <h>
+    </h>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a
+                            href="{{ path('app_hotel_riu_tikida_show', {id: hotel_riu_tikida.id}) }}">{{ hotel_riu_tikida.typeChambre }}</a>
+                    </h5>
+
+                    
+                    <p class="card-text"> {{ hotel_riu_tikida.price }}    <h>
+    </h>DH par personne.</p>
+    <p class="card-text"> {{ hotel_riu_tikida.Surface }}    <h>
+    </h>m².</p>
+                      {% if hotel_riu_tikida.filename %}
+        <img src="{{ vich_uploader_asset(hotel_riu_tikida, 'imageFile')  }}" alt="card-img-top" style="width: 100%;height:100%;">
+{% endif %}
+                    <div class="text-primary" style="font-weight: bold; font-size: 2em;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+  </section>
+ 
+
+
+{% endblock %}

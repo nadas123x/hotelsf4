@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit HotelRiuTikida{% endblock %}
+
+{% block body %}
+   <link rel="stylesheet" type="text/css" href="{{asset('css/h.css') }}">
+    
+
+    {{ include('hotel_riu_tikida/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_hotel_riu_tikida_index') }}">back to list</a>
+
+    {{ include('hotel_riu_tikida/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title hotel.nom %}
+
+{% block body %}
+        <link rel="stylesheet" type="text/css" href="{{asset('css/img.css') }}">
+
+<div class="jumbotron">
+    <div class="container">
+      
+
+        
+        <div class="row">
+            <div class="col-md-8">
+                {% if hotel.filename %}
+        <img src="{{ vich_uploader_asset(hotel, 'imageFile')  }}" alt="card-img-top" style="width: 100%;height:100%;">
+                   
+              
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                <h1> <u> {{ hotel.nom }} </u></h1>
+                <h2>{{ hotel.adresse }} </h2>
+                <div > <h2> Classé le: {{ hotel.rang }}  <h2>
+                </div>
+                <a href="{{ path('galerie') }}" class="btn btn-primary  btn-lg" style="background-color: #877466;" role="button">Contactez</a></a>
+                <div id="contact-form" class="mt-4">
+                  
+                
+                    <div class="form-group">
+
+                      <a href="{{ path('galerie') }}"  class="btn btn-primary  btn-lg" style="background-color: #877466;">Envoyer</a>
+                      <a href="{{ path('galerie') }}"  class="btn btn-primary  btn-lg" style="background-color: #877466;">Galerie Photos</a>
+                    </div>
+               
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-4">
+
+    <p>
+       <b> {{ hotel.description | nl2br }} <b>
+    </p>
+
+    <div class="row">
+        
+            <h2><b> <u>Caractéristiques: </u><b></h2>
+            <table class="table table-striped" style="border: 1px solid;">
+                <tr>
+                    <td><b>Nom Hotel:<b></td>
+                    <td>{{ hotel.nom }} </td>
+                </tr>
+                <tr>
+                    <td><b>Adresse:<b></td>
+                    <td>{{ hotel.adresse }}</td>
+                </tr>
+                <tr>
+                    <td><b>Rang:<b></td>
+                    <td>{{ hotel.rang }}</td>
+                </tr>
+                <tr>
+                    <td> <b>Services: <b></td>
+                    <td>{{ hotel.Services }}</td>
+                </tr>
+                <tr>
+                    <td><b>Nombre d'étoiles:<b></td>
+                    <td>{{ hotel.Toiles }}</td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

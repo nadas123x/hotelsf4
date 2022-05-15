@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title hotel_riu_tikida.typeChambre  %}
+{% block body %}
+   <div class="jumbotron">
+    <div class="container">
+      
+        
+        <div class="row">
+            <div class="col-md-8">
+                {% if hotel_riu_tikida.filename %}
+        <img src="{{ vich_uploader_asset(hotel_riu_tikida, 'imageFile')  }}" alt="card-img-top" style="width: 100%;height:100%;">
+                   
+              
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                <h1>{{ hotel_riu_tikida.title }}</h1>
+                <h2>{{ hotel_riu_tikida.Surface }} pièces - {{ hotel_riu_tikida.price }} m²</h2>
+                <div class="text-primary" style="font-size: 4rem;font-weight: bold;">{{ hotel_riu_tikida.price }} €
+                </div>
+                <a href="{{ path('galerie') }}" class="btn btn-primary">Contacter l'agence</a>
+                <div id="contact-form" class="mt-4">
+                  
+                
+                    <div class="form-group">
+                        <button class="btn btn-primary">Envoyer</button>
+                      <a href="{{ path('galerie') }}" class="btn btn-primary">Galerie Photos</a>
+                    </div>
+               
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container mt-4">
+
+    <p>
+        {{ hotel_riu_tikida.description | nl2br }}
+    </p>
+
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Caractéristiques</h2>
+            <table class="table table-striped">
+                <tr>
+                    <td>Surface habitable</td>
+                    <td>{{ hotel_riu_tikida.price }} m²</td>
+                </tr>
+                <tr>
+                    <td>Pièces</td>
+                    <td>{{ hotel_riu_tikida.price }}</td>
+
+                </tr>
+            
+             
+              
+            </table>
+        </div>
+        
+    </div>
+   <!-- <a href="{{ path('app_hotel_riu_tikida_index') }}">back to list</a> -->
+
+     <!--  <a href="{{ path('app_hotel_riu_tikida_edit', {'id': hotel_riu_tikida.id}) }}">edit</a> -->
+
+       <!-- {{ include('hotel_riu_tikida/_delete_form.html.twig') }} -->
+{% endblock %} 

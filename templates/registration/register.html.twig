@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block title %}Register{% endblock %}
+
+{% block body %}
+        <link rel="stylesheet" type="text/css" href="{{asset('css/img.css') }}">
+
+
+    {% for flash_error in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+    
+<section class="saying_block Musk">
+    <div class="saying_content">
+ 
+   
+
+    {{ form_start(registrationForm) }}
+     <h1>Inscription</h1>
+     <br>
+        <br>
+     
+    <div class="col">
+    
+     
+        {{ form_row(registrationForm.email) }}
+      
+
+         </div>
+     
+         <div class="col">
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+            
+        }) 
+        
+        }}
+           </div>
+        
+      
+
+       
+
+         <button class="btn  btn-dark" style="background-color: #877466;" type="submit"> Se connecter
+ </button>
+    {{ form_end(registrationForm) }}
+     </div>
+
+ </section>
+{% endblock %}

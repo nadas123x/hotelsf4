@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New HotelRiuTikida{% endblock %}
+
+{% block body %}
+   <link rel="stylesheet" type="text/css" href="{{asset('css/h.css') }}">
+    {{ include('hotel_riu_tikida/_form.html.twig') }}
+
+    <a href="{{ path('app_hotel_riu_tikida_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,210 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+  }
+  div {
+    display: block;
+  }
+  .saying_block.Musk {
+ 
+    background-image: url(https://www.alksar.com/wp-content/uploads/2018/05/Place-Jemaa-El-Fna-Marrakech-tomb%C3%A9e-de-la-Nuit.jpg);
+  }
+
+  .saying_block {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  article,
+  aside,
+  footer,
+  header,
+  hgroup,
+  main,
+  nav,
+  section {
+    display: block;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    background: #e9e9e9;
+    font-family: "Roboto", "Noto Sans TC", sans-serif;
+    color: #172730;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    background: #e9e9e9;
+    font-family: "Roboto", "Noto Sans TC", sans-serif;
+    color: #172730;
+  }
+  .saying_block.Musk .saying_content {
+       background-color:    rgb(6 6 6 / 70%);
+  }
+  .saying_block .saying_content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body,
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  form,
+  fieldset,
+  input,
+  textarea,
+  p,
+  blockquote,
+  th,
+  td {
+    margin: 0;
+    padding: 0;
+  }
+  .saying_block .saying_content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .saying_block .saying_content .text_box h2 {
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 50px;
+    font-family: "Bitter", serif;
+    font-style: italic;
+    letter-spacing: 1px;
+  }
+  h2 {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+  }
+  .saying_block .saying_content .text_box h3 {
+    font-size: 15px;
+    letter-spacing: 15px;
+    font-weight: normal;
+    padding: 30px 0 20px 0;
+  }
+  body,
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  form,
+  fieldset,
+  input,
+  textarea,
+  p,
+  blockquote,
+  th,
+  td {
+    margin: 0;
+    padding: 0;
+  }
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+  }
+  .saying_block .saying_content .text_box p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 20px 0 20px 0;
+    opacity: 0.7;
+  }
+  p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+  }
+  .saying_block.buffett {
+    background-image: url(https://cf.bstatic.com/xdata/images/hotel/max1280x900/166351983.jpg?k=f9df72a8cb907b868d33768deefe0f6b0f19a840971f0abbaa7c7f96676fba33&o=&hp=1);
+  }
+
+  .saying_block.bezos {
+    background-image: url(https://d1cdc15hzkd3wm.cloudfront.net/products/medias/originalmark/X1NSWlhL.jpg);
+   
+  }
+
+  .saying_block.sandberg {
+    background-image: url(
+      https://res.cloudinary.com/grand-luxury/image/upload/w_480,h_256,q_50,f_auto,c_fill,g_center,dpr_3/remote_glh/original/92660-root-exteriors-front-facade.jpg
+    );
+    background-color: rgba(48, 42, 42, 0.7);
+
+  }
+  .saying_block.bezos .saying_content {
+    background-color: rgba(31, 22, 22, 0.7);
+  }
+  .navbar-light .navbar-brand {
+    color: rgb(191 119 119 / 90%);
+}
+.bg-dark {
+  background-color: #221615f0!important; 
+}
+*, ::after, ::before {
+  box-sizing: content-box;
+}
+
+.container{
+  padding-left: 10.5em;
+
+}
+.card {
+  border-color: #080808;
+    background-color: rgba(39, 29, 29, 0.7);
+
+}
+
+.card-title{
+  border-color: #080808;
+
+  background-color: rgb(221, 217, 217);
+  color: blue;
+}

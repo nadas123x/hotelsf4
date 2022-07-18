@@ -13,7 +13,7 @@ class SecurityController extends AbstractController
      * @Route("/login", name="app_login")
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
-    {
+    { //class pour acceder aux diff methodes de l authentification
     
 
         // get the login error if there is one

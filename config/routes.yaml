@@ -1,5 +1,5 @@
 home:
-  path: /nada
+  path: /
   controller: App\Controller\HomeController::index
 homeriu:
   path: /riu
